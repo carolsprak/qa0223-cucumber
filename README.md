@@ -1,4 +1,4 @@
-## Testes com Cucumber e Cypres:
+## Testes com Cucumber e Cypress:
 
 Projeto com fins acadêmicos do tutorial dos testes E2E usando o Cucumber com Cypress com funcionalidades descritas usando BDD. 
 
