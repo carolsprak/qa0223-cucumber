@@ -1,23 +1,35 @@
-Testes com Cucumber e Cypres
+# Testes com Cucumber e Cypres:
 
-Acessar: https://docs.cypress.io/guides/getting-started/installing-cypress
+Projeto com fins acadêmicos do tutorial dos testes E2E usando o Cucumber com Cypress. 
+
+# 1. Comandos necessários para instalar o projeto localmente
+
+- Acessar: https://docs.cypress.io/guides/getting-started/installing-cypress
+
+```bash
+# Primeira vez que for instalar o cypress
 npm install cypress --save-dev
+```
 
-Acessar: https://cucumber.io/docs/installation/javascript/
-npm install --save-dev @cucumber/cucumber
+- Acessar: https://cucumber.io/docs/installation/javascript/
+
+```bash
+# Primeira vez que for instalar o cypress cucumber processor
 npm install --save-dev cypress cypress-cucumber-processor
-
+```
+- Testar a instalação do Cypress e depois fechar o navegador.
+```bash 
 npx cypress@9.7.0 open
+```
 
-Configurando o Cucumber no Cypress:Adicione ao arquivo cypress/plugins/index.js:
+# 2. Configurando o Cucumber no Cypress:Adicione ao arquivo cypress/plugins/index.js:
 
 const cucumber = require('cypress-cucumber-preprocessor').default
 module.exports = (on, config) => {
   on('file:preprocessor', cucumber())
 }
 
-
-Adicione o seguinte código no arquivo package.json:
+# 3. Adicione o seguinte código no arquivo package.json:
 
 {
     "scripts": {
@@ -32,6 +44,14 @@ Adicione o seguinte código no arquivo package.json:
     }
 }
 
+# 4. Executar o projeto:
 
-servidor: npm run test
-local: npx cypress open
+```bash
+# No servidor
+npm run test
+```
+
+```bash
+# Localmente
+npx cypress open
+```
