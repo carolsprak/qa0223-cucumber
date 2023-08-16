@@ -18,6 +18,11 @@ class LoginPage {
     }
 
     visualizarBotaoParaConectar(){
+
+        /*cy.xpath("//input[@id='wp-submit']")
+            .invoke('attr', 'value')
+            .should('eq','Conecte-se')*/
+            
         cy.get(loginElements.botaoConectese())
             .invoke('attr', 'value')
             .should('eq', 'Conecte-se')
