@@ -8,6 +8,6 @@ When('clico em login', () => {
     loginPage.abrirMenuLogin()
     loginPage.abrirPaginaLogin()
 }) 
-Then('a página são exibidos os campos email, senha e botão conecte-se', () => {
+Then('na página são exibidos os campos email, senha e botão conecte-se', () => {
     loginPage.visualizarBotaoParaConectar()
 }) 
