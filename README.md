@@ -2,36 +2,17 @@
 
 Projeto com fins acadêmicos do tutorial dos testes E2E usando o Cucumber com Cypress com funcionalidades descritas usando BDD. 
 
+
 ### 1. Comandos necessários para instalar o projeto localmente
 
-- Documentação do cypress: https://docs.cypress.io/guides/getting-started/installing-cypress
+- Criando projeto node
 
 ```bash
-# Primeira vez que for instalar o cypress
-npm install cypress --save-dev
+# Primeira vez que for criar o projeto
+npm init -y
 ```
 
-- Documentação do cucumber: https://cucumber.io/docs/installation/javascript/
-
-```bash
-# Primeira vez que for instalar o cypress cucumber processor
-npm install --save-dev cypress cypress-cucumber-processor
-```
-- Testar a instalação do Cypress e depois fechar o navegador.
-```bash 
-npx cypress@9.7.0 open
-```
-
-### 2. Configurando o Cucumber no Cypress:Adicione ao arquivo cypress/plugins/index.js:
-
-```bash
-const cucumber = require('cypress-cucumber-preprocessor').default
-module.exports = (on, config) => {
-  on('file:preprocessor', cucumber())
-}
-```
-
-### 3. Adicione o seguinte código no arquivo package.json:
+### 2. Adicione o seguinte código no arquivo package.json:
 
 ```bash
 {
@@ -48,7 +29,31 @@ module.exports = (on, config) => {
 }
 ```
 
-### 4. Executar o projeto:
+### 3. Comandos necessários para instalar o projeto localmente
+
+- Documentação do cypress: https://docs.cypress.io/guides/getting-started/installing-cypress
+- Documentação do cucumber: https://cucumber.io/docs/installation/javascript/
+
+```bash
+# Primeira vez que for instalar o projeto
+npm install 
+```
+ 
+- Complementar a instalação do Cypress e depois fechar o navegador.
+```bash 
+npx cypress@9.7.0 open
+```
+
+### 4. Configurando o Cucumber no Cypress:Adicione ao arquivo cypress/plugins/index.js:
+
+```bash
+const cucumber = require('cypress-cucumber-preprocessor').default
+module.exports = (on, config) => {
+  on('file:preprocessor', cucumber())
+}
+```
+
+### 5. Executar o projeto:
 
 ```bash
 # No servidor
@@ -60,7 +65,7 @@ npm run test
 npx cypress open
 ```
 
-### 5. Instalação do Xpath para Cypress
+### 6. Instalação do Xpath para Cypress
 
 - Acessar: https://www.npmjs.com/package/cypress-xpath
 
@@ -82,7 +87,7 @@ cy.xpath("//input[@id='wp-submit']")
   .invoke('attr', 'value')
   .should('eq','Conecte-se')
 ```
-### 6. Comandos do Cypress
+### 7. Comandos do Cypress
 
 - Seletor é o elemento HTML único que pode ser recuperado usando o Xpath ou um atributo chave que identifique o elemento, por exemplo: estilos css, id, values, etc.
 
